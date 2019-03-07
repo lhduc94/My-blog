@@ -1,18 +1,4 @@
----
-layout: post
-comments: true
-title:  "Bài 8: Gradient Descent (phần 2/2)"
-title2:  "8. Gradient Descent (2/2)"
-date:   2017-01-16 15:22:00
-permalink: 2017/01/16/gradientdescent2/
-mathjax: true
-tags: GD Optimization Online-learning Batch
-category: Optimization
-sc_project: 11221352
-sc_security: b7d744c5
-img: /assets/GD/gd2.gif
-summary: Các phương pháp tăng tốc và các biến thể của Gradient Descent thường được dùng trong Machine Learning và Deep Learning  
----
+
 
 
 *Dựa vào đặc điểm của biến mục tiêu, có thể chia Decision Tree thành hai dạng : Regression Tree và Classification Tree. Nếu biến mục tiêu thuộc dạng continous variable, Decision Tree được gọi là Regression Tree (hay còn gọi là Continous Variable Decision Tree). Ngược lại nếu biến mục tiêu thuộc dạng categorical variable, Decision Tree được gọi là Classification Tree (hay còn gọi là Categorical Variable Decision Tree).*
