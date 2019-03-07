@@ -1,9 +1,9 @@
 # main links
 main:
   - title: "About"
-     url: https://lehuynhduc.com/about/
+     url: /about/
   - title: "Post"
-     url: https://lehuynhduc.com/posts/
+     url: /posts/
   - title: "Quick-Start Guide"
     url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
 
