@@ -3,10 +3,10 @@
 
 Con mèo kêu meo meo
 
-$$
+hôm nay tôi đi học$$
 \begin{equation*}
 \frac{1}{2\pi}\int_{-\infty}^{\infty}e^{-\frac{x^2}{2}}dx \\
 \frac{1}{2\pi}\int_{-\infty}^{\infty}e^{-\frac{x^2}{2}}dx
 \end{equation*}
-$$
+$$ nhận thấy
 
