@@ -106,22 +106,22 @@ $$Entropy = -p log_2 p - q log_2 q$$
 
 **Phân nhánh theo thuộc tính Gender**
 
-1. Entropy của node cha :
+1. Entropy của node cha : \\
 $$-\frac{15}{30}log_2(\frac{15}{30})-\frac{15}{30}log_2(\frac{15}{30})=\mathbf{1}$$
-2. Entropy cho node Female:
+2. Entropy cho node Female: \\
 $$-\frac{2}{10}log_2(\frac{2}{10})-\frac{8}{10}log_2(\frac{8}{10})=0.72$$
-3. Entropy cho node Male:
+3. Entropy cho node Male: \\
 $$-\frac{13}{20}log_2(\frac{13}{20})-\frac{7}{20}log_2(\frac{7}{20})=0.93$$
-4. Entropy cho thuộc tính Gender:
+4. Entropy cho thuộc tính Gender: \\
 $$\frac{10}{30} * 0.72 + \frac{20}{30} * 0.93 =\mathbf{0.86}$$
 
 **Phân nhánh theo thuộc tính Class**
 
-1. Entropy cho node Class IX:
+1. Entropy cho node Class IX: \\
 $$-\frac{6}{14}log_2(\frac{6}{14})-\frac{8}{14}log_2(\frac{8}{14})=0.99$$
-2. Entropy cho node Class X :
+2. Entropy cho node Class X : \\
 $$-\frac{9}{16}log_2(\frac{9}{16})-\frac{7}{16}log_2(\frac{7}{16})=0.99$$
-3. Entropy cho thuộc tính Class
+3. Entropy cho thuộc tính Class: \\
 $$\frac{14}{30} * 0.99 + \frac{16}{30}*0.99=\mathbf{0.99}$$
 
 
@@ -144,19 +144,19 @@ Trong đó $$\bar{X}$$ là giá trị trung bình, $$X$$ là giá trị thực t
 **Ví dụ** : Để đơn giản cho bài toán Regression ,  chúng ta tiến hành chuẩn hóa biến mục tiêu như sau : giá trị 1 đại diện cho Play và giá trị 0 đại diện cho Not play
 
 **Phân nhánh theo thuộc tính Gender**
-1. Tính Variance của node cha:
-  $$Mean = \frac{15*1 + 15*0}{30} = 0.5$$
+1. Tính Variance của node cha: \\
+  $$Mean = \frac{15*1 + 15*0}{30} = 0.5$$ \\
   $$Variance = \frac{(1-0.5)^2 + ... +(1-0.5)^2 +(0-0.5)^2 +....+(0-0.5)^2}{30} =\mathbf{0.25}$$
 
-2. Tính Variance cho node Female:
-  $$Mean  =\frac{2*1 + 8*0}{10}=0.2$$   
+2. Tính Variance cho node Female: \\
+  $$Mean  =\frac{2*1 + 8*0}{10}=0.2$$ \\  
   $$Variance = \frac{(1-0.2)^2 + (1-0.2)^2 + (0-0.2)^2 +......+(0-0.2)^2}{10} = 0.16$$
 
-3. Tính Variance cho node Male:
-  $$Mean = \frac{13*1 + 7*0}{20} = 0.65$$  
+3. Tính Variance cho node Male: \\
+  $$Mean = \frac{13*1 + 7*0}{20} = 0.65$$ \\  
   $$Variance = \frac{(1-0.65)^2+....+(1-0.65)^2+(0-0.65)^2+.....+(0-065)^2}{20}=0.23$$
 
-4. Tính Variance cho việc phân nhánh theo Gender
+4. Tính Variance cho việc phân nhánh theo Gender: \\
   $$\frac{10}{30}*0.16 + \frac{20}{30}*0.23=\mathbf{0.21}$$
 
 **Phân nhánh theo thuộc tính Class**
@@ -164,11 +164,11 @@ Trong đó $$\bar{X}$$ là giá trị trung bình, $$X$$ là giá trị thực t
   $$Mean =\frac{6*1 + 8*0}{14}=0.43$$ 
   $$Variance=\frac{(1-0.43)^2+...+(1-0.43)^2+...+(0-0.43)^2+....+(0-043)^2}{14}=0.24$$
 
-2. Tính Variance cho node X:
-  $$Mean =\frac{9*1 + 7*0}{16}=0.56$$
+2. Tính Variance cho node X: \\
+  $$Mean =\frac{9*1 + 7*0}{16}=0.56$$ \\
   $$Variance=\frac{(1-0.56)^2+...+(1-0.56)^2+(0-0.56)^2+...+(0-0.56)^2}{16} = 0.25$$
 
-3. Tính Variance cho việc phân nhánh theo Class:
+3. Tính Variance cho việc phân nhánh theo Class: \\
   $$\frac{14}{30}*0.24 +\frac{16}{30}*0.25 = \mathbf{0.25}$$
 
 Ta nhận thấy Variance của **Gender**  thấp hơn so với **Class** , do đó việc phân nhánh sẽ dựa trên thuộc tính **Gender**
