@@ -145,37 +145,31 @@ Trong đó $$\bar{X}$$ là giá trị trung bình, $$X$$ là giá trị thực t
 
 **Phân nhánh theo thuộc tính Gender**
 1. Tính Variance của node cha:
-
-$$Mean = \frac{15*1 + 15*0}{30} = 0.5$$
-$$Variance = \frac{(1-0.5)^2 + ... +(1-0.5)^2 +(0-0.5)^2 +....+(0-0.5)^2}{30} =\mathbf{0.25}$$
+  $$Mean = \frac{15*1 + 15*0}{30} = 0.5$$
+  $$Variance = \frac{(1-0.5)^2 + ... +(1-0.5)^2 +(0-0.5)^2 +....+(0-0.5)^2}{30} =\mathbf{0.25}$$
 
 2. Tính Variance cho node Female:
-
-$$Mean  =\frac{2*1 + 8*0}{10}=0.2$$   
-$$Variance = \frac{(1-0.2)^2 + (1-0.2)^2 + (0-0.2)^2 +......+(0-0.2)^2}{10} = 0.16$$
+  $$Mean  =\frac{2*1 + 8*0}{10}=0.2$$   
+  $$Variance = \frac{(1-0.2)^2 + (1-0.2)^2 + (0-0.2)^2 +......+(0-0.2)^2}{10} = 0.16$$
 
 3. Tính Variance cho node Male:
-
-$$Mean = \frac{13*1 + 7*0}{20} = 0.65$$  
-$$Variance = \frac{(1-0.65)^2+....+(1-0.65)^2+(0-0.65)^2+.....+(0-065)^2}{20}=0.23$$
+  $$Mean = \frac{13*1 + 7*0}{20} = 0.65$$  
+  $$Variance = \frac{(1-0.65)^2+....+(1-0.65)^2+(0-0.65)^2+.....+(0-065)^2}{20}=0.23$$
 
 4. Tính Variance cho việc phân nhánh theo Gender
-$$\frac{10}{30}*0.16 + \frac{20}{30}*0.23=\mathbf{0.21}$$
+  $$\frac{10}{30}*0.16 + \frac{20}{30}*0.23=\mathbf{0.21}$$
 
 **Phân nhánh theo thuộc tính Class**
-1. Tính Variance cho node IX: 
-
-$$Mean =\frac{6*1 + 8*0}{14}=0.43$$
-$$Variance=\frac{(1-0.43)^2+...+(1-0.43)^2+...+(0-0.43)^2+....+(0-043)^2}{14}=0.24$$
+1. Tính Variance cho node IX: \\
+  $$Mean =\frac{6*1 + 8*0}{14}=0.43$$ 
+  $$Variance=\frac{(1-0.43)^2+...+(1-0.43)^2+...+(0-0.43)^2+....+(0-043)^2}{14}=0.24$$
 
 2. Tính Variance cho node X:
-
-$$Mean =\frac{9*1 + 7*0}{16}=0.56$$
-$$Variance=\frac{(1-0.56)^2+...+(1-0.56)^2+(0-0.56)^2+...+(0-0.56)^2}{16} = 0.25$$
+  $$Mean =\frac{9*1 + 7*0}{16}=0.56$$
+  $$Variance=\frac{(1-0.56)^2+...+(1-0.56)^2+(0-0.56)^2+...+(0-0.56)^2}{16} = 0.25$$
 
 3. Tính Variance cho việc phân nhánh theo Class:
-
-$$\frac{14}{30}*0.24 +\frac{16}{30}*0.25 = \mathbf{0.25}$$
+  $$\frac{14}{30}*0.24 +\frac{16}{30}*0.25 = \mathbf{0.25}$$
 
 Ta nhận thấy Variance của **Gender**  thấp hơn so với **Class** , do đó việc phân nhánh sẽ dựa trên thuộc tính **Gender**
 
