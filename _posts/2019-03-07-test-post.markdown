@@ -10,3 +10,4 @@ hôm nay tôi đi học$$
 \end{equation*}
 $$ nhận thấy
 
+$$ 0 \leq h_{\theta}(x) \leq 1$$
