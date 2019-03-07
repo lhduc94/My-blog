@@ -1,14 +1,12 @@
 *Dựa vào đặc điểm của biến mục tiêu, có thể chia Decision Tree thành hai dạng : Regression Tree và Classification Tree. Nếu biến mục tiêu thuộc dạng continous variable, Decision Tree được gọi là Regression Tree (hay còn gọi là Continous Variable Decision Tree). Ngược lại nếu biến mục tiêu thuộc dạng categorical variable, Decision Tree được gọi là Classification Tree (hay còn gọi là Categorical Variable Decision Tree).*
 
-
-
 ## Regression Tree và Classification Tree
 
 Cả 2 loại tree đều có cách thức hoạt động giống nhau, dưới đây là so sánh giữa Regression Tree và Classification Tree
 
-1. Regression Tree có biến mục tiêu là biến liên tục, trong khi Classification Tree có biến mục tiêu la biến phân loại.
-2. Trong Regression Tree, khi huấn luyện, giá trị tại nút lá bằng trung bình các giá trị biến mục tiêu của các điểm dữ liệu có trong nút đó. Nên khi đưa tập test vào, nếu các điểm dữ liệu rơi vào nút lá nào, kết quả trả ra sẽ là giá trị trung bình.
-3. Với Classification Tree, khi huấn luyện, giá trị tại nút lá(phân lớp) bằng giá trị có tần suất cao nhất(Mode) của các dữ liệu trong nút đó. Nên khi đưa tập test vào, nếu các điểm dữ liệu rơi vào nút lá nào, kết quả trả ra sẽ là Mode.
+1. **Regression Tree** có biến mục tiêu là biến liên tục, trong khi Classification Tree có biến mục tiêu la biến phân loại.
+2. **Trong Regression Tree**, khi huấn luyện, giá trị tại nút lá bằng trung bình các giá trị biến mục tiêu của các điểm dữ liệu có trong nút đó. Nên khi đưa tập test vào, nếu các điểm dữ liệu rơi vào nút lá nào, kết quả trả ra sẽ là giá trị trung bình.
+3. Với **Classification Tree**, khi huấn luyện, giá trị tại nút lá(phân lớp) bằng giá trị có tần suất cao nhất(Mode) của các dữ liệu trong nút đó. Nên khi đưa tập test vào, nếu các điểm dữ liệu rơi vào nút lá nào, kết quả trả ra sẽ là Mode.
 
 ## Làm sao Decision Tree quyết định khi nào sẽ phân nhánh
 
@@ -37,16 +35,16 @@ $$0.2^2 +0.8^2 =0.68$$
 2. Gini cho node Male :
 $$0.65^2 + 0.35^2 = 0.55$$
 3. Tính trọng số Gini cho việc phân nhánh theo Gender :
-$0.68 * \frac{10}{30} + 0.55 * \frac{20}{30} = 0.59$
+$$0.68 * \frac{10}{30} + 0.55 * \frac{20}{30} = 0.59$$
 
 **Phân nhánh theo thuộc tính Class**
 
 1. Tính Gini cho node Class IX :
-$0.43^2 + 0.57^2 = 0.51$
+$$0.43^2 + 0.57^2 = 0.51$$
 2. Tính Gini cho node Class X :
-$0.56^2 + 0.44^2 = 0.51$
+$$0.56^2 + 0.44^2 = 0.51$$
 3. Tính trọng số Gini cho việc phân nhánh theo Class :
-$0.51 * \frac{14}{30} + 0.51 * \frac{16}{30} = 0.51$
+$$0.51 * \frac{14}{30} + 0.51 * \frac{16}{30} = 0.51$$
 
 Ta nhận thấy Gini Score cho **Gender** cao hơn **Class** , do đó việc phân nhánh sẽ dựa trên thuộc tính **Gender**
 
@@ -93,7 +91,7 @@ Entropy là chỉ số để đo độ hỗn loạn của dữ liệu.Entropy c�
 
 Công thức tính Entropy được biểu diễn như sau
 
-$Entropy = -p log_2 p - q log_2 q$
+$$Entropy = -p log_2 p - q log_2 q$$
 
 **Các bước tính Entropy cho phân nhánh**
 
@@ -105,13 +103,13 @@ $Entropy = -p log_2 p - q log_2 q$
 **Phân nhánh theo thuộc tính Gender**
 
 1. Entropy của node cha :
-$-\frac{15}{30}log_2(\frac{15}{30})-\frac{15}{30}log_2(\frac{15}{30})=\mathbf{1}$
+$$-\frac{15}{30}log_2(\frac{15}{30})-\frac{15}{30}log_2(\frac{15}{30})=\mathbf{1}$$
 2. Entropy cho node Female:
-$-\frac{2}{10}log_2(\frac{2}{10})-\frac{8}{10}log_2(\frac{8}{10})=0.72$
+$$-\frac{2}{10}log_2(\frac{2}{10})-\frac{8}{10}log_2(\frac{8}{10})=0.72$$
 3. Entropy cho node Male:
-$-\frac{13}{20}log_2(\frac{13}{20})-\frac{7}{20}log_2(\frac{7}{20})=0.93$
+$$-\frac{13}{20}log_2(\frac{13}{20})-\frac{7}{20}log_2(\frac{7}{20})=0.93$$
 4. Entropy cho thuộc tính Gender:
-$\frac{10}{30} * 0.72 + \frac{20}{30} * 0.93 =\mathbf{0.86}$
+$$\frac{10}{30} * 0.72 + \frac{20}{30} * 0.93 =\mathbf{0.86}$$
 
 **Phân nhánh theo thuộc tính Class**
 
@@ -166,4 +164,4 @@ $$\frac{14}{30}*0.24 +\frac{16}{30}*0.25 = \mathbf{0.25}$$
 
 Ta nhận thấy Variance của **Gender**  thấp hơn so với **Class** , do đó việc phân nhánh sẽ dựa trên thuộc tính **Gender**
 
-[Link bài viết](https://www.lehuynhduc.com/tree-based-modeling-phan-2/)
+
