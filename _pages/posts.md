@@ -1,6 +1,6 @@
 ---
 permalink: /posts/
-title: "Read and Comment"
+title: "Danh sách các bài viết"
 author_profile: true
 ---
 
