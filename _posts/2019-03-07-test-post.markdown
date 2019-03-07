@@ -4,8 +4,8 @@
 Con mèo kêu meo meo
 
 $$
-\begin{}
+\begin{align*}
 \frac{1}{2\pi}\int_{-\infty}^{\infty}e^{-\frac{x^2}{2}}dx \\
 \frac{1}{2\pi}\int_{-\infty}^{\infty}e^{-\frac{x^2}{2}}dx
-\end{}
+\end{align*}
 $$
