@@ -107,7 +107,7 @@ analytics:
 # Site Author
 author:
   name             : "Lê Huỳnh Đức"
-  avatar           : "assets/image/avatar.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  avatar           : "assets/images/avatar.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "Data Scientist at FPT Telecom."
   location         : "Ho Chi Minh City"
   email            : "lhduc94@gmail.com"
