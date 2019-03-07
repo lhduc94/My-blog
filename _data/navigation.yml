@@ -1,13 +1,6 @@
 # main links
 main:
-  - title: "About"
-     url: /about/
-  - title: "Post"
-     url: /posts/
-  - title: "Facebook"
-    url: https://www.facebook.com/
-  - title: "Tags"
-    url: /tags/
+
   # - title: "Quick-Start Guide"
   #   url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
 
@@ -17,3 +10,11 @@ main:
   #   url: /collection-archive/
   # - title: "Sitemap"
   #   url: /sitemap/
+#   - title: "About"
+#      url: /about/
+#   - title: "Post"
+#      url: /posts/
+#   - title: "Facebook"
+#     url: https://www.facebook.com/
+#   - title: "Tags"
+#     url: /tags/
