@@ -130,7 +130,9 @@ author:
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
       # url: "https://instagram.com/"
-
+# Site header:
+header:  
+  image: /assets/images/cover.jpg
 # Site Footer
 footer:
   links:
