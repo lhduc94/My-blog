@@ -43,5 +43,5 @@ Dưới đây là một số thuật ngữ cơ bản :
 2. **Không tốt với các biến liên tục** : Quá trình splitting hiệu quả khi các biến mô tả là các biến thuộc dạng categorical.
 ____________________________________________________________________________________________
 
-Nguồn tham khảo : https://www.analyticsvidhya.com/blog/2016/04/complete-tutorial-tree-based-modeling-scratch-in-python/
+Nguồn tham khảo : <https://www.analyticsvidhya.com/blog/2016/04/complete-tutorial-tree-based-modeling-scratch-in-python/>
 
