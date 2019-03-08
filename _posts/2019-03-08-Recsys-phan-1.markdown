@@ -25,7 +25,7 @@ Lấy dữ liệu rating
 ratings = df_pivot.values
 ```
 ### KNN - model
-Bạn có thể thay đổi metric bằng `'cosine'`. Tham khảo [NearestNeighbors](http://scikit-learn.org/stable/modules/generated/sklearn.neighbors.NearestNeighbors.html)
+Bạn có thể thay đổi metric bằng `cosine`. Tham khảo [NearestNeighbors](http://scikit-learn.org/stable/modules/generated/sklearn.neighbors.NearestNeighbors.html)
 ```python
 model_knn = NearestNeighbors(metric='euclidean',algorithm='kd_tree')
 model_knn.fit(ratings)
