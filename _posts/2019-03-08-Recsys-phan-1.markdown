@@ -1,5 +1,5 @@
 ---
-title : Recommendation Ph
+title : Recommendation Phần 1
 ---
 Mình xin chia sẻ cách giải quyết bài toán __Recommendation__ theo hướng tiếp cận __Collaborative Filtering__ với thuật toán __KNN-itembased__
 
