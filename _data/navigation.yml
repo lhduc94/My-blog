@@ -5,8 +5,8 @@ main:
     url: /posts/
   - title: "Tags"
     url: /tags/
-  - title: "Quickstart- Guide"
-    url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
+  # - title: "Quickstart- Guide"
+  #  url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
   # - title: "Sample Posts"
   #   url: /year-archive/
   # - title: "Sample Collections"
