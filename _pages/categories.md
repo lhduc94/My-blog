@@ -5,7 +5,6 @@ title: "Danh sách các bài viết"
 author_profile: true
 ---
 ---
-layout: post
 title: Categories
 ---
 
