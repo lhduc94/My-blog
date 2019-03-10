@@ -1,6 +1,6 @@
 ---
 title : Recommender System Part 1
-permalink : /2019/03/08/recsyspart1
+permalink : /2019/03/08/recsyspart1/
 category : Recommender System
 ---
 Mình xin chia sẻ cách giải quyết bài toán __Recommendation__ theo hướng tiếp cận __Collaborative Filtering__ với thuật toán __KNN-itembased__
