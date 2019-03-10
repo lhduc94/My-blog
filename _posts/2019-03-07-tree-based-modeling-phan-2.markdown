@@ -1,6 +1,7 @@
 ---
 title: Tree based Modeling Part 2
 permalink: /2019/03/07/tree_based_modeling_part_2/
+toc: true
 ---
 <!-- MarkdownTOC -->
 - [Regression Tree và Classification Tree](#-regression-tree-va-classification-tree)
