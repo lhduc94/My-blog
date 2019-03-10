@@ -33,7 +33,7 @@ Gini phát biểu rằng, nếu lấy hai quan sát từ 1 tập dữ liệu đ�
 
 **Các bước để tính chỉ số Gini**
 
-1. Tính Gini cho sub-node bằng cách tính tổng bình phương xác suất của “succsess” và “failure” $(p^2+q^2)$
+1. Tính Gini cho sub-node bằng cách tính tổng bình phương xác suất của “succsess” và “failure” $$(p^2+q^2)$$
 2. Tính trọng số Gini cho việc phân nhánh
 
 **Ví  dụ**  ![](https://fmlcb.s3.dualstack.us-east-2.amazonaws.com/original/2X/d/d7274f85c81efed784aa62bd38127aba1793c156.png)
