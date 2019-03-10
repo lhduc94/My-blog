@@ -1,6 +1,6 @@
 ---
 title: Tree based Modeling Part 2
-permalik: /2019/03/07/tree_based_modeling_part_2
+permalink: /2019/03/07/tree_based_modeling_part_2/
 ---
 
 *Dựa vào đặc điểm của biến mục tiêu, có thể chia Decision Tree thành hai dạng : Regression Tree và Classification Tree. Nếu biến mục tiêu thuộc dạng continous variable, Decision Tree được gọi là Regression Tree (hay còn gọi là Continous Variable Decision Tree). Ngược lại nếu biến mục tiêu thuộc dạng categorical variable, Decision Tree được gọi là Classification Tree (hay còn gọi là Categorical Variable Decision Tree).*
