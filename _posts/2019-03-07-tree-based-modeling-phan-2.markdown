@@ -12,7 +12,7 @@ permalink: /2019/03/07/tree_based_modeling_part_2/
   - [Gini Index](#-2.1)
   - [Chi-Square](#-2.2)
   - [Infomation Gain](#-2.3)
-  - [Reduce Variance](#-2.4)
+  - [Reduce in Variance](#-2.4)
 <!-- /MarkdownTOC -->
 <a name="-1"></a>
 
