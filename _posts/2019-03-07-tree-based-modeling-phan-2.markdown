@@ -36,7 +36,8 @@ Gini phát biểu rằng, nếu lấy hai quan sát từ 1 tập dữ liệu đ�
 1. Tính Gini cho sub-node bằng cách tính tổng bình phương xác suất của “succsess” và “failure” $$(p^2+q^2)$$
 2. Tính trọng số Gini cho việc phân nhánh
 
-**Ví  dụ**  ![](https://fmlcb.s3.dualstack.us-east-2.amazonaws.com/original/2X/d/d7274f85c81efed784aa62bd38127aba1793c156.png)
+**Ví  dụ**  
+![](https://fmlcb.s3.dualstack.us-east-2.amazonaws.com/original/2X/d/d7274f85c81efed784aa62bd38127aba1793c156.png)
 
 **Phân nhánh theo thuộc tính Gender**
 
@@ -151,15 +152,15 @@ Trong đó $$\bar{X}$$ là giá trị trung bình, $$X$$ là giá trị thực t
 
 **Phân nhánh theo thuộc tính Gender**
 1. Tính Variance của node cha: \\
-  $$Mean = \frac{15*1 + 15*0}{30} = 0.5$$ \\
+  $$Mean = \frac{15*1 + 15*0}{30} = 0.5$$ 
   $$Variance = \frac{(1-0.5)^2 + ... +(1-0.5)^2 +(0-0.5)^2 +....+(0-0.5)^2}{30} =\mathbf{0.25}$$
 
 2. Tính Variance cho node Female: \\
-  $$Mean  =\frac{2*1 + 8*0}{10}=0.2$$ \\  
+  $$Mean  =\frac{2*1 + 8*0}{10}=0.2$$  
   $$Variance = \frac{(1-0.2)^2 + (1-0.2)^2 + (0-0.2)^2 +......+(0-0.2)^2}{10} = 0.16$$
 
 3. Tính Variance cho node Male: \\
-  $$Mean = \frac{13*1 + 7*0}{20} = 0.65$$ \\  
+  $$Mean = \frac{13*1 + 7*0}{20} = 0.65$$ 
   $$Variance = \frac{(1-0.65)^2+....+(1-0.65)^2+(0-0.65)^2+.....+(0-065)^2}{20}=0.23$$
 
 4. Tính Variance cho việc phân nhánh theo Gender: \\
@@ -171,7 +172,7 @@ Trong đó $$\bar{X}$$ là giá trị trung bình, $$X$$ là giá trị thực t
   $$Variance=\frac{(1-0.43)^2+...+(1-0.43)^2+...+(0-0.43)^2+....+(0-043)^2}{14}=0.24$$
 
 2. Tính Variance cho node X: \\
-  $$Mean =\frac{9*1 + 7*0}{16}=0.56$$ \\
+  $$Mean =\frac{9*1 + 7*0}{16}=0.56$$ 
   $$Variance=\frac{(1-0.56)^2+...+(1-0.56)^2+(0-0.56)^2+...+(0-0.56)^2}{16} = 0.25$$
 
 3. Tính Variance cho việc phân nhánh theo Class: \\
