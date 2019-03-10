@@ -5,6 +5,17 @@ permalink: /2019/03/07/tree_based_modeling_part_2/
 
 *Dựa vào đặc điểm của biến mục tiêu, có thể chia Decision Tree thành hai dạng : Regression Tree và Classification Tree. Nếu biến mục tiêu thuộc dạng continous variable, Decision Tree được gọi là Regression Tree (hay còn gọi là Continous Variable Decision Tree). Ngược lại nếu biến mục tiêu thuộc dạng categorical variable, Decision Tree được gọi là Classification Tree (hay còn gọi là Categorical Variable Decision Tree).*
 
+**Trong trang này:**
+<!-- MarkdownTOC -->
+- [Regression Tree và Classification Tree](#-1)
+- [Làm sao Decision Tree quyết định khi nào sẽ phân nhánh](#-2)
+  - [Gini Index](#-2.1)
+  - [Chi-Square](#-2.2)
+  - [Infomation Gain](#-2.3)
+  - [Reduce Variance](#-2.4)
+<!-- /MarkdownTOC -->
+<a name="-1"></a>
+
 ## Regression Tree và Classification Tree
 
 Cả 2 loại tree đều có cách thức hoạt động giống nhau, dưới đây là so sánh giữa Regression Tree và Classification Tree
@@ -12,11 +23,11 @@ Cả 2 loại tree đều có cách thức hoạt động giống nhau, dưới 
 1. **Regression Tree** có biến mục tiêu là biến liên tục, trong khi Classification Tree có biến mục tiêu la biến phân loại.
 2. **Trong Regression Tree**, khi huấn luyện, giá trị tại nút lá bằng trung bình các giá trị biến mục tiêu của các điểm dữ liệu có trong nút đó. Nên khi đưa tập test vào, nếu các điểm dữ liệu rơi vào nút lá nào, kết quả trả ra sẽ là giá trị trung bình.
 3. Với **Classification Tree**, khi huấn luyện, giá trị tại nút lá(phân lớp) bằng giá trị có tần suất cao nhất(Mode) của các dữ liệu trong nút đó. Nên khi đưa tập test vào, nếu các điểm dữ liệu rơi vào nút lá nào, kết quả trả ra sẽ là Mode.
-
+<a name="-2"></a>
 ## Làm sao Decision Tree quyết định khi nào sẽ phân nhánh
 
 Các quyết định phân nhánh sẽ ảnh hưởng đến độ chính xác của Cây quyết đinh. Cây hồi quy và cây phân lớp có các thuật toán phân nhánh khác nhau. Có nhiều thuật toán phân nhánh, tùy vào kiểu của biến mục tiêu mà sử dụng thuật toán như thế nào. Có 4 thuật toán chính :
-
+<a name="-2.1"></a>
 ### Gini Index
 
 Gini phát biểu rằng, nếu lấy hai quan sát từ 1 tập dữ liệu đồng nhất thì xác suất hai quan sát đó cùng lớp là bằng 1.
@@ -52,7 +63,7 @@ $$0.56^2 + 0.44^2 = 0.51$$
 $$0.51 * \frac{14}{30} + 0.51 * \frac{16}{30} = 0.51$$
 
 Ta nhận thấy Gini Score cho **Gender** cao hơn **Class** , do đó việc phân nhánh sẽ dựa trên thuộc tính **Gender**
-
+<a name="-2.2"></a>
 ### Chi-Square
 
 Thuật toán tìm ý nghĩa thống kê giữa sự khác nhau của node con và node cha. Chi-square được tính bằng cách tính tổng bình phương độ lệch chuẩn giữa các quan sát và kì vọng tần suất của biến phụ thuộc
@@ -87,7 +98,7 @@ Chi-square =  ((Thực tế – Kì vọng)^2 / Kì vọng)^1/2
 ![chiq2](https://fmlcb.s3.dualstack.us-east-2.amazonaws.com/original/2X/3/322c8aaf474874147989e8972505e28972df3380.png)
 
 Ta nhận thấy Chi-Square Score cho **Gender** cao hơn **Class** , do đó việc phân nhánh sẽ dựa trên thuộc tính **Gender**
-
+<a name="-2.3"></a>
 ### Information Gain
 
 ![Information_Gain_Decision_Tree2](https://fmlcb.s3.dualstack.us-east-2.amazonaws.com/original/2X/7/761c7fc5ca71dc766b9bef748ea3634f1c12fc41.png)
@@ -128,7 +139,7 @@ $$\frac{14}{30} * 0.99 + \frac{16}{30}*0.99=\mathbf{0.99}$$
 
 
 Ta nhận thấy Entropy Score cho **Gender** thấp hơn **Class** , do đó việc phân nhánh sẽ dựa trên thuộc tính **Gender.**  Hoặc có thể tính Information Gain = 1  – Entropy, Phân nhánh nào có Information Gain cao hơn sẽ được chọn.
-
+<a name="-2.4"></a>
 ### Reduction in Variance
 
 Cả ba thuật toán trên đều áp dụng cho Categorical Decision Tree. Reduction in Varicance là thuật toán sử dụng cho Regression Decision Tree. Thuật toán sử dụng phương sai để chọn việc phân nhánh. Phân nhánh nào có phương sai nhỏ hơn thì sẽ được chọn. Công thức tính như sau
