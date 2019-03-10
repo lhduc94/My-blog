@@ -1,6 +1,6 @@
 ---
 permalink: /categories/
-title: "Category"
+title: "Categories"
 author_profile: true
 ---
 
