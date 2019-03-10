@@ -1,12 +1,9 @@
 ---
-layout: posts
 permalink: /categories/
-title: "Danh sách các bài viết"
+title: "Category"
 author_profile: true
 ---
----
-title: Categories
----
+
 
 <div class="tags-expo">
   <div class="tags-expo-list">
