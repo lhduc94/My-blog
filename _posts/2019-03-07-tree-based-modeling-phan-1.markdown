@@ -1,8 +1,7 @@
 ---
 title: Tree based Modeling Part 1
 permalink: /2019/03/07/tree_based_modeling_part_1/
-categories: Data Science
-categories: Data
+category: Data Science
 toc: true
 toc_label: M
 ---
