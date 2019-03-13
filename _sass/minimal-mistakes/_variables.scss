@@ -47,7 +47,7 @@ $type-size-8: 0.625em !default; // ~10px
 /*
    Colors
    ========================================================================== */
-
+$black: #000000 !default;
 $gray: #7a8288 !default;
 $dark-gray: mix(#000, $gray, 40%) !default;
 $darker-gray: mix(#000, $gray, 60%) !default;
@@ -57,8 +57,8 @@ $lighter-gray: mix(#fff, $gray, 90%) !default;
 $background-color: #fff !default;
 $code-background-color: #fafafa !default;
 $code-background-color-dark: $light-gray !default;
-$text-color: #000000 !default;
-$muted-text-color: mix(#fff, $text-color, 35%) !default;
+$text-color: $black !default;
+$muted-text-color: $black !default;
 $border-color: $lighter-gray !default;
 $form-background-color: $lighter-gray !default;
 $footer-background-color: $lighter-gray !default;
