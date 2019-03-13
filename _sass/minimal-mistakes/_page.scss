@@ -247,13 +247,12 @@
 
 .page__meta {
   margin-top: 2em;
-  color: $black;
+  color:  $muted-text-color;
   font-family: $sans-serif;
   font-size: $type-size-6;
 
   p {
     margin: 0;
-    color: $black;
   }
 
   a {
