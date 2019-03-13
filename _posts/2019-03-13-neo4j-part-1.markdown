@@ -2,5 +2,5 @@
 title: Neo4j Phần 1 - Giới thiệu về Neo4j
 permalink: 2019/03/13/neo4j_part_1
 categories: Database
-toc: Tr
+toc: True
 ---
