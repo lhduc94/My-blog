@@ -1,6 +1,8 @@
 ---
 title: Tree based Modeling Part 1
 permalink: /2019/03/07/tree_based_modeling_part_1/
+category: Data Science, Document
+toc: true
 ---
 *Thuật toán máy học dựa trên mô hình tree-based là một trong những thuật toán được xem là tốt nhất và được nhiều người sử dụng nhất. Nhóm thuật toán này cho kết quả dự đoán có độ chính xác cao và dễ diễn giải.Không giống như mô hình tuyến tính, Tree based Model ánh xạ mối quan hệ phi tuyến rất tốt. Do đó mô hình này thích hợp để giải quyết hầu hết các bài toán phân lớp và hồi quy.Các thuật toán Decision Trees, Random Forest, Gradient Boosting được sử dụng phổ biến trong các bài toán Data Science.*
 
