@@ -73,9 +73,11 @@
   }
 
   p,
-  li,
+  li {
+    font-size: 0.8em;
+  }
   dl {
-    font-size: 1em;
+    font-size: 0.8em;
   }
 
   /* paragraph indents */
