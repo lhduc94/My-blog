@@ -2,7 +2,6 @@
 title: Information Retrieval
 permalink: 2019/03/25/information_retrieval
 category: Information Retrieval
-toc: True
 ---
 ## Lịch sử của Truy vấn thông tin(Information Retrieval)
  Truy vấn thông tin là một lĩnh vực có lịch sử lâu đời. Nguồn gốc tính toán của nó có thể bắt đầu từ cuối những năm 1940, và được chứng minh bằng một hệ thống thực tế vào năm 1960. Nó được mô tả như là một nhánh con(subfields) của khoa học thông tin (information science) và trong khoa học máy tính, truy vấn thông tin có mối quan hệ mật thiết với nhiều lĩnh vực như: hệ thống cơ sở dữ liệu, tương tác người máy, [công nghệ ngôn ngữ](https://en.wikipedia.org/wiki/Language_technology), nhận dạng hình ảnh, nhánh con của nén dữ liệu và giải thuật, và là một nhánh của trí tuệ nhân tạo.
