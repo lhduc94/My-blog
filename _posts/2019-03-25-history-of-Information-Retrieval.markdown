@@ -1,5 +1,5 @@
 ---
-title: Information Retrieval
+title: Lịch sử của Truy vấn thông tin
 permalink: 2019/03/25/information_retrieval
 category: Information Retrieval
 ---
