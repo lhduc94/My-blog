@@ -1,6 +1,6 @@
 ---
-Title: Các hàm trong Pandas
-Category : Data Science
+title: Các hàm trong Pandas
+category : Data Science
 permalink: /2019/05/30/Cac_ham_trong_pandas
 ---
 
