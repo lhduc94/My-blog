@@ -3,8 +3,13 @@ title: Các hàm trong Pandas
 category : Data Science
 permalink: /2019/05/30/Cac_ham_trong_pandas
 ---
+### pandas.get_dummies
+
+Sử dụng để chuyển dữ liệu Categorical sang dạng Onehot
+Ví dụ
 
 ### pandas.cut
+
 Sử dụng để Phân đoạn dữ liệu trong khoảng từ (a,b) thành các bins khác nhau và gán nhãn cho từng đoạn.
 
 Giả sử ta có một `np.array([1, 2, 3, 4, 5, 6, 7, 8, 9])` cần phân thành 3 đoạn khác nhau. Ta có thể sử dụng hàm `pandas.cut` như sau
