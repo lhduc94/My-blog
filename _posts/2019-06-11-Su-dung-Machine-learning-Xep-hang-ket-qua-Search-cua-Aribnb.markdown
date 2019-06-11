@@ -8,12 +8,12 @@ permalink: 2019/06/11/Su_dung_Machine_Learning_de_xep_hang_ket_qua_search_cua_Ai
 Khi số lượng trải nghiệm tăng lên, Tìm kiếm và Khám phá cũng như Cá nhân hóa trở thành nhân tố quan trọng cho sự phát triển và thành công của thị trường. Dưới đây là 3 bước của Search Ranking Machine Learning model mà Airbnb áp dụng :
 * **Bước 1 - Offline Machine Learning Model :**
     * Kích thước dữ liệu : Nhỏ
-    * Loại dữ liệu : Thuộc tính dịch vụ
+    * Loại dữ liệu : Thuộc tính của dịch vụ
     * Tính điểm :  Offline
 * **Bước 2 - Offline Personalized Machine Learning Model :**
     * Kích thước dữ liệu : Trung bình
     * Loại dữ liệu : 
-        * Thuộc tính dịch vụ
+        * Thuộc tính của dịch vụ
         * Thuộc tính người dùng
     * Tính điểm :  Offline
 * **Bước 2 - Online Personalized Machine Learning Model :**
@@ -26,7 +26,7 @@ Khi số lượng trải nghiệm tăng lên, Tìm kiếm và Khám phá cũng n
 
 ## Bước 1: Xây dựng Baseline
 
-Khi Airbnb Experiences ra mắt, khối lượng trải nghiệm người dùng cần để xếp hạng còn ít và cần thu thấp dữ liệu dựa trên tương tác của người dùng như impressions, clicks và bookings. Trong thời gian này, lựa chọn tốt nhất là tái xếp hạng kết quả hằng ngày bằng phương pháp chọn ngẫu nhiên cho đến khi đủ dữ liệu để phát triển cho giai đoạn 1.
+   Khi Airbnb Experiences ra mắt, khối lượng trải nghiệm người dùng cần để xếp hạng còn ít và cần thu thấp dữ liệu dựa trên tương tác của người dùng như impressions, clicks và bookings. Trong thời gian này, lựa chọn tốt nhất là tái xếp hạng kết quả hằng ngày bằng phương pháp chọn ngẫu nhiên cho đến khi đủ dữ liệu để phát triển cho giai đoạn 1.
 
 **Thu thập dữ liệu huấn luyện:** Để huấn luyện ML model cho việc xếp hạn, Airbnb thu thập search logs của các khách hàng đã đặt chỗ.
 ![img1](https://cdn-images-1.medium.com/max/1200/1*6oFrH49leqhJR2fd2wRHpQ.png)
