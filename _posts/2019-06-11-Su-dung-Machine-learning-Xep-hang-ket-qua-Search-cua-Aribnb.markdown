@@ -1,6 +1,5 @@
 ---
-title: Sử dụng Machine Learning 
-để xếp hạng kết quả Search của Airbnb Experiences
+title: Sử dụng Machine Learning để xếp hạng kết quả Search của Airbnb Experiences
 category: Data Science
 permalink: 2019/06/11/Su_dung_Machine_Learning_de_xep_hang_ket_qua_search_cua_Airbnb_Experiences
 ---
