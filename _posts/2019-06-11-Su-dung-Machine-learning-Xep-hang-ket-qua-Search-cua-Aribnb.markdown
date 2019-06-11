@@ -37,16 +37,16 @@ __Thu thập dữ liệu huấn luyện:__ Để huấn luyện ML model cho vi�
 __Gán nhãn dữ liệu huấn luyện:__ Khi gán nhãn cho dữ liệu huấn luyện, Airbnb chủ yếu tập trung vào 2 nhãn: *Đặt chỗ* (positive labels) và *Click xem nhưng không Đặt chỗ* (negative labels). Theo cách này, họ thu thập được 50,000 mẫu dữ liệu. 
 
 __Xây dựng các thuộc tính của dữ liệu được huấn luyện:__ Trong giai đoạn 1 của ML model, họ quyết định xếp hạng dựa trên *Các Thuộc tính của Expreiences*. Tổng cộng có 25 thuộc tính trong đó có thể liệt kê như:
-* Thời lượng (1h, 2h, 3h,....)
-* Giá và Giá/giờ
-* Thể loại (lớp nấu ăn, âm nhạc, lướt sóng)
-* Đánh giá (ratings, số lượng views)
-* Số lượng Đặt chỗ (7 ngày gần đây, 30 ngày gần đây)
-* Số lượng phòng còn trống, đã đặt trước
-* Số lượng người tối đa (ví dụ tối đa 5 người)
-* Click-through rate
+   * Thời lượng (1h, 2h, 3h,....)
+   * Giá và Giá/giờ
+   * Thể loại (lớp nấu ăn, âm nhạc, lướt sóng)
+   * Đánh giá (ratings, số lượng views)
+   * Số lượng Đặt chỗ (7 ngày gần đây, 30 ngày gần đây)
+   * Số lượng phòng còn trống, đã đặt trước
+   * Số lượng người tối đa (ví dụ tối đa 5 người)
+   * Click-through rate.
 
-
+__Huấn luyện Ranking model:__ Airbnb sử dụng [Gradient Boosted Decision Tree(GBDT)](https://github.com/yarny/gbdt) model để huấn luyện dữ liệu này. Họ giải quyết bài toán này như một bài toán *Binary Classification* với *log-loss loss function*. 
 
 Khi sử dụng GBDT chúng ta không cần phải quan tâm đến việc scaling features hay missing values. Tuy nhiên, không giống như mô hình tuyến tính, sử dụng các giá trị đếm thô làm các features cho các model dạng cây sẽ gặp vấn đề khi các biến đếm có xu hướng tăng trưởng nhanh chóng trong thời gian ngắn. Vì vậy, tốt hơn chúng ta nên sử dụng tỉ lệ làm featurs. Ví dụ, thay vì sử dụng số lượng đặt chỗ trong 7 ngày (ví dụ 10 lượt), chúng ta nên sử dụng tỉ lệ đặt chỗ so với số người xem (ví dụ 12 lượt trên 1000 người xem). 
 
