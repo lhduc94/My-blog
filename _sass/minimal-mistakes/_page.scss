@@ -86,12 +86,12 @@
     font-size: 0.8em;
     
     /* sibling indentation*/
-    @if $paragraph-indent == true {
+    /*@if $paragraph-indent == true {
       & + p {
         text-indent: $indent-var;
         margin-top: -($indent-var);
       }
-    }
+    }*/
   }
 
   a:not(.btn) {
