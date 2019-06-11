@@ -43,3 +43,6 @@ Khi Airbnb Experiences ra mắt, khối lượng trải nghiệm người dùng 
 
 **Huấn luyện Ranking model:** Airbnb sử dụng [Gradient Boosted Decision Tree(GBDT)](https://github.com/yarny/gbdt) model để huấn luyện dữ liệu này. Họ giải quyết bài toán này như một bài toán *Binary Classification* với *log-loss loss function*
 
+Khi sử dụng GBDT chúng ta không cần phải quan tâm đến việc scaling features hay missing values. Tuy nhiên, không giống như mô hình tuyến tính, sử dụng các giá trị đếm thô làm các features cho các model dạng cây sẽ gặp vấn đề khi các biến đếm có xu hướng tăng trưởng nhanh chóng trong thời gian ngắn. Vì vậy, tốt hơn chúng ta nên sử dụng tỉ lệ làm featurs. Ví dụ, thay vì sử dụng số lượng đặt chỗ trong 7 ngày (ví dụ 10 lượt), chúng ta nên sử dụng tỉ lệ đặt chỗ so với số người xem (ví dụ 12 lượt trên 1000 người xem)
+
+**Kiểm tra Ranking model:** Để điều chỉnh các hyper-parameter hay so sánh với random Ranking model, chúng ta sử dụng tập hold-out data (là dữ liệu không sử dụng trong tập huấn luyện), và sử dụng các metrics chuẩn cho ranking như AUC và NDCG 
