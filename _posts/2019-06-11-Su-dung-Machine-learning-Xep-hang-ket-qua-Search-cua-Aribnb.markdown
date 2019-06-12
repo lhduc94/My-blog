@@ -47,17 +47,6 @@ __Xây dựng các thuộc tính của dữ liệu được huấn luyện:__ Tr
 * Số lượng người tối đa (ví dụ tối đa 5 người)
 * Click-through rate.
 
-
-
-
-
-
-
-
-
-
-
-
 __Huấn luyện Ranking model:__ Airbnb sử dụng [Gradient Boosted Decision Tree(GBDT)](https://github.com/yarny/gbdt) model để huấn luyện dữ liệu này. Họ giải quyết bài toán này như một bài toán *Binary Classification* với *log-loss loss function*.
 
 Khi sử dụng GBDT chúng ta không cần phải quan tâm đến việc scaling features hay missing values. Tuy nhiên, không giống như mô hình tuyến tính, sử dụng các giá trị đếm thô làm các features cho các model dạng cây sẽ gặp vấn đề khi các biến đếm có xu hướng tăng trưởng nhanh chóng trong thời gian ngắn. Vì vậy, tốt hơn chúng ta nên sử dụng tỉ lệ làm featurs. Ví dụ, thay vì sử dụng số lượng đặt chỗ trong 7 ngày (ví dụ 10 lượt), chúng ta nên sử dụng tỉ lệ đặt chỗ so với số người xem (ví dụ 12 lượt trên 1000 người xem).
