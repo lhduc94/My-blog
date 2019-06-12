@@ -51,4 +51,8 @@ __Huấn luyện Ranking model:__ Airbnb sử dụng [Gradient Boosted Decision 
 
 Khi sử dụng GBDT chúng ta không cần phải quan tâm đến việc scaling features hay missing values. Tuy nhiên, không giống như mô hình tuyến tính, sử dụng các giá trị đếm thô làm các features cho các model dạng cây sẽ gặp vấn đề khi các biến đếm có xu hướng tăng trưởng nhanh chóng trong thời gian ngắn. Vì vậy, tốt hơn chúng ta nên sử dụng tỉ lệ làm featurs. Ví dụ, thay vì sử dụng số lượng đặt chỗ trong 7 ngày (ví dụ 10 lượt), chúng ta nên sử dụng tỉ lệ đặt chỗ so với số người xem (ví dụ 12 lượt trên 1000 người xem).
 
-__Kiểm tra Ranking model:__ Để điều chỉnh các hyper-parameter hay so sánh với random Ranking model, chúng ta sử dụng tập hold-out data (là dữ liệu không sử dụng trong tập huấn luyện), và sử dụng các metrics chuẩn cho ranking như AUC và NDCG.
+__Kiểm tra Ranking model:__ Để điều chỉnh các hyper-parameter hay so sánh với random Ranking model, chúng ta sử dụng tập hold-out data (là dữ liệu không sử dụng trong tập huấn luyện), và sử dụng các metrics chuẩn cho ranking như AUC và NDCG. Ngoài ra họ còn tái xếp hạng các Experiences dựa trên score tính từ model (xác suất Đặt chỗ) và kiểm tra xếp hạng của những Expreience đã được Đặt chỗ trong toàn bộ những Experiences mà người dùng đã click vào (càng cao càng tốt).
+Thêm vào đó, để dễ hình dung những gì mà model đã học, họ tiến hành vẽ biểu đồ thể hiện sự phụ thuộc của kết quả đối với các thuộc tính quan trọng của Experiences. Các biểu đồ này sẽ cho ta biết được điều gì sẽ xảy ra với điểm score cho Experiences khi ta thay đổi giá trị của các features ngoại trừ feature cần kiểm tra. Kết quả thu được như sau:
+* Experiences có nhiều lượt đặt chỗ trên 1k người xem sẽ được xếp hạng cao hơn
+* Experiences với trung bình các đánh giá cao hơn sẽ được xếp hạng cao hơn
+* Expreieces có giá thấp hơn sẽ được xếp hạn cao hơn
