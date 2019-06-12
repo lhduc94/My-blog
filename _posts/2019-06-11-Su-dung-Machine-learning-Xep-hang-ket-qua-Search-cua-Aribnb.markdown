@@ -5,7 +5,7 @@ permalink: 2019/06/11/Su_dung_Machine_Learning_de_xep_hang_ket_qua_search_cua_Ai
 ---
 ![img](https://raw.githubusercontent.com/lhduc94/My-blog/master/_posts/images_2019-06-11-Su-dung-Machine-learning-Xep-hang-ket-qua-Search-cua-Aribnb/img2.PNG)
 ## Giới thiệu:
-Khi số lượng trải nghiệm tăng lên, Tìm kiếm và Khám phá cũng như Cá nhân hóa trở thành nhân tố quan trọng cho sự phát triển và thành công của thị trường. Dưới đây là 3 bước của Search Ranking Machine Learning model mà Airbnb áp dụng cho Experiences của họ (Ứng dụng của Airbnb gồm 3 mục chính: Homes, Experiences, Restaurants. Experiences theo như mình hiểu là những loại hình dịch vụ mang tính trải nghiệm như Lướt ván, Lặn, Tham quan di tích nên trong bài dịch này mình giữ nguyên từ này):
+Khi số lượng trải nghiệm tăng lên, Tìm kiếm và Khám phá cũng như Cá nhân hóa trở thành nhân tố quan trọng cho sự phát triển và thành công của thị trường. Dưới đây là 3 bước của Search Ranking Machine Learning model mà Airbnb áp dụng cho Experiences của họ (Ứng dụng của Airbnb gồm 3 mục chính: Homes, Experiences, Restaurants. Experiences theo như mình hiểu là những loại hình dịch vụ mang tính trải nghiệm như Lướt ván, Lặn, Tham quan di tích nên trong bài dịch mình giữ nguyên từ này):
 
 
 __Bước 1 - Offline Machine Learning Model:__
@@ -33,7 +33,7 @@ __Bước 3 - Online Personalized Machine Learning Model:__
 
 Khi Airbnb Experiences ra mắt, khối lượng Experiences cần để xếp hạng còn ít và cần thu thập dữ liệu dựa trên tương tác của người dùng như impressions, clicks và bookings. Trong thời gian này, lựa chọn tốt nhất là tái xếp hạng kết quả hằng ngày bằng phương pháp chọn ngẫu nhiên cho đến khi đủ dữ liệu để phát triển cho giai đoạn 1.
 
-__Thu thập dữ liệu huấn luyện:__ Để huấn luyện ML model cho việc xếp hạn, Airbnb thu thập search logs của các khách hàng đã đặt chỗ.
+__Thu thập dữ liệu huấn luyện:__ Để huấn luyện ML model cho việc xếp hạng, Airbnb thu thập search logs của các khách hàng đã đặt chỗ.
 ![img1](https://cdn-images-1.medium.com/max/1200/1*6oFrH49leqhJR2fd2wRHpQ.png).
 
 __Gán nhãn dữ liệu huấn luyện:__ Khi gán nhãn cho dữ liệu huấn luyện, Airbnb chủ yếu tập trung vào 2 nhãn: *Đặt chỗ* (positive labels) và *Click xem nhưng không Đặt chỗ* (negative labels). Theo cách này, họ thu thập được 50,000 mẫu dữ liệu.
