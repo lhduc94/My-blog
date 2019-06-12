@@ -60,6 +60,6 @@ Thêm vào đó, để dễ hình dung những gì mà model đã học, họ ti
 * Expreieces có giá thấp hơn sẽ được xếp hạng cao hơn
 ![img3](https://raw.githubusercontent.com/lhduc94/My-blog/master/_posts/images_2019-06-11-Su-dung-Machine-learning-Xep-hang-ket-qua-Search-cua-Aribnb/img3.png)
 
-Vì việc thử nghiệm offline có quá nhiều giả định, dữ liệu bị giới hạn bởi những gì mà người dùng đã clicks và những dữ liệu này chỉ là một phần trong toàn bộ kho dữ liệu, vì vậy họ tiến hành A/B test. Họ so sánh ML model này với việc xếp hạng dựa trên quy tắc về số lượng đặt chỗ. Kết quả cho thấy Mô hình tăng thêm 13% số lượng đặt chỗ.
+Vì việc kiểm tra offline có quá nhiều giả định, dữ liệu bị giới hạn bởi những gì mà người dùng đã clicks và những dữ liệu này chỉ là một phần trong toàn bộ kho dữ liệu, vì vậy họ tiến hành A/B test. Họ so sánh ML model này với việc xếp hạng dựa trên quy tắc về số lượng đặt chỗ. Kết quả cho thấy Mô hình tăng thêm 13% số lượng đặt chỗ.
 
 __Chi tiết thực hiện:__ Ở bước này, ML model chỉ sử dụng các thuộc tính của Experience nên kết quả xếp hạng sẽ giống nhau đối với toàn bộ người dùng, và các tham số truyền vào khi truy vấn (số lượng đặt, ngày đặt, địa điểm) chỉ được dùng để lọc các kết quả trả về, điểm ranking không phụ thuộc vào các tham số này.
