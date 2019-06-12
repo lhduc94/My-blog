@@ -5,7 +5,7 @@ permalink: 2019/06/11/Su_dung_Machine_Learning_de_xep_hang_ket_qua_search_cua_Ai
 ---
 ![img](https://raw.githubusercontent.com/lhduc94/My-blog/master/_posts/images_2019-06-11-Su-dung-Machine-learning-Xep-hang-ket-qua-Search-cua-Aribnb/img2.PNG)
 ## Giới thiệu:
-Khi số lượng trải nghiệm tăng lên, Tìm kiếm và Khám phá cũng như Cá nhân hóa trở thành nhân tố quan trọng cho sự phát triển và thành công của thị trường. Dưới đây là 3 bước của Search Ranking Machine Learning model mà Airbnb áp dụng cho Experiences của họ (Ứng dụng của Airbus gồm 3 mục chính: Homes, Experiences, Restaurants. Experiences theo như mình hiểu là những loại hình dịch vụ mang tính trải nghiệm như Lướt ván, Lặn, Tham quan di tích nên trong bài dịch này mình giữ nguyên từ này):
+Khi số lượng trải nghiệm tăng lên, Tìm kiếm và Khám phá cũng như Cá nhân hóa trở thành nhân tố quan trọng cho sự phát triển và thành công của thị trường. Dưới đây là 3 bước của Search Ranking Machine Learning model mà Airbnb áp dụng cho Experiences của họ (Ứng dụng của Airbnb gồm 3 mục chính: Homes, Experiences, Restaurants. Experiences theo như mình hiểu là những loại hình dịch vụ mang tính trải nghiệm như Lướt ván, Lặn, Tham quan di tích nên trong bài dịch này mình giữ nguyên từ này):
 
 
 __Bước 1 - Offline Machine Learning Model:__
