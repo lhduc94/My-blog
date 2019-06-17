@@ -63,3 +63,11 @@ Thêm vào đó, để dễ hình dung những gì mà model đã học, họ ti
 Vì việc kiểm tra offline có quá nhiều giả định, dữ liệu bị giới hạn bởi những gì mà người dùng đã clicks và những dữ liệu này chỉ là một phần trong toàn bộ kho dữ liệu, vì vậy họ tiến hành A/B test. Họ so sánh ML model này với việc xếp hạng dựa trên quy tắc về số lượng đặt chỗ. Kết quả cho thấy Mô hình tăng thêm 13% số lượng đặt chỗ.
 
 __Chi tiết thực hiện:__ Ở bước này, ML model chỉ sử dụng các thuộc tính của Experience nên kết quả xếp hạng sẽ giống nhau đối với toàn bộ người dùng, và các tham số truyền vào khi truy vấn (số lượng đặt, ngày đặt, địa điểm) chỉ được dùng để lọc các kết quả trả về, điểm ranking không phụ thuộc vào các tham số này.
+
+## Bước 2 - Personalize
+Bước tiếp theo trong việc phát triển Search Ranking là thêm Cá nhân nhóa vào Machine Learning model. Cá nhân hóa đóng vai trò lớn trong việc ranking Experiences bởi tính đa dạng của kho dữ liệu và sở thích người dùng, việc áp dụng này giúp tiết kiệm được thời gian chọn lựa của người dùng cũng như tăng khả năng "thành công" của Experiences được Đặt chỗ.
+
+Không giống như dịch vụ Homes, hai _Private Room_ cùng ở chung một thành phố với cùng mức giá thì rất giống nhau, trong khi đó hai Experiences được chọn ngẫu nhiên có thể rất khác nhau (ví dụ _Lớp học nấu ăn_ và _Lớp học lướt sóng_). Đồng thời, du khách có những sở thích và ý muốn trong chuyến du lịch của họ. Mục tiêu của Airbnb là làm sao nắm bắt được sở thích của họ một cách nhanh chóng và trả ra nội dung phù hợp.
+
+Airbnb giới thiệu 2 cách khác nhau cho Cá nhân hóa khác nhau dựa trên dữ liệu thu thập từ người dùng.
+### 1. Cá nhân hóa dựa trên Đặt chỗ trên Airbnb Homes
