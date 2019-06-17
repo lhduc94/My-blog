@@ -71,3 +71,17 @@ Không giống như dịch vụ Homes, hai _Private Room_ cùng ở chung một 
 
 Airbnb giới thiệu 2 cách khác nhau cho Cá nhân hóa khác nhau dựa trên dữ liệu thu thập từ người dùng.
 ### 1. Cá nhân hóa dựa trên Đặt chỗ trên Airbnb Homes
+Phần lớn các lượt Đặt chỗ trên Experiences đến từ người dùng đã đặt chỗ trên Airbnb Home. Do đó có khá nhiều thông tin để có thể xây dựng các features cho Cá nhân hóa:
+* Địa điểm đặt chỗ trên Homes
+* Ngày đi
+* Đi trong bao lâu
+* Số lượng khách
+* Giá chuyến đi
+* Đi kiểu Gia đình / Business
+* Địa điểm khứ hồi
+* Đi trong nước / Quốc tế
+* (First trip or returning to location)
+* Khoảng thời gian đặt phòng đến lúc nhận phòng (Lead days)
+Để chứng minh các features trên có thể dùng để tính ranking, Airbnb đưa ra 2 dẫn chứng quan trọng:
+* _Khoảng cách(Distance) giữa Home đã được Đặt trước và Experience._. Biết được địa điểm Đặt chỗ Home(vĩ độ và kinh độ) cũng như địa điểm của Experience, chúng ta có thể tính được khoảng cách giữa 2 địa điểm. Dữ liệu cho thấy du khách thích sự tiện lợi, phần lớn các Experiences được đặt gần với Home.
+* _Các Experience có thể có trong Chuyến đi_ : Dựa vào ngày nhận phòng và trả phòng, chúng ta có thể liệt kê và đánh dấu các Experiences có trong khoảng thời gian này.
