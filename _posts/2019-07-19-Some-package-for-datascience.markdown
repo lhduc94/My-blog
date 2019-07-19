@@ -46,3 +46,23 @@ Total time: 11.383785
 (590540, 434)
 (506691, 433)
 ```
+## [pystacknet](https://github.com/h2oai/pystacknet)
+Package cho Stacking model
+``` python
+from sklearn.ensemble import RandomForestClassifier, RandomForestRegressor, ExtraTreesClassifier, ExtraTreesRegressor, GradientBoostingClassifier,GradientBoostingRegressor
+from sklearn.linear_model import LogisticRegression, Ridge
+from sklearn.decomposition import PCA
+    models=[ 
+            
+            [RandomForestClassifier (n_estimators=100, criterion="entropy", max_depth=5, max_features=0.5, random_state=1),
+             ExtraTreesRegressor (n_estimators=100, max_depth=5, max_features=0.5, random_state=1),
+             GradientBoostingClassifier(n_estimators=100, learning_rate=0.1, max_depth=5, max_features=0.5, random_state=1),
+             LogisticRegression(random_state=1),
+             PCA(n_components=4,random_state=1)
+             ],
+            
+            [RandomForestClassifier (n_estimators=200, criterion="entropy", max_depth=5, max_features=0.5, random_state=1)]
+            
+            
+            ]
+```      
