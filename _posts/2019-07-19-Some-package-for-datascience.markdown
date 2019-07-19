@@ -37,7 +37,7 @@ print("Total time: %f" % (t4 - t1))
 print(train_df.shape)
 print(test_df.shape)
 ```
-kết quả
+Kết quả
 ```python
 Time to parse: 2.803587                                                         
 Time to join: 0.134542
