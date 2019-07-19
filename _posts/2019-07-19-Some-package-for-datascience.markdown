@@ -53,16 +53,16 @@ from sklearn.ensemble import RandomForestClassifier, RandomForestRegressor, Extr
 from sklearn.linear_model import LogisticRegression, Ridge
 from sklearn.decomposition import PCA
     models=[ 
-            
-            [RandomForestClassifier (n_estimators=100, criterion="entropy", max_depth=5, max_features=0.5, random_state=1),
+                        ######## First level ########
+            [
+             RandomForestClassifier (n_estimators=100, criterion="entropy", max_depth=5, max_features=0.5, random_state=1),
              ExtraTreesRegressor (n_estimators=100, max_depth=5, max_features=0.5, random_state=1),
              GradientBoostingClassifier(n_estimators=100, learning_rate=0.1, max_depth=5, max_features=0.5, random_state=1),
              LogisticRegression(random_state=1),
              PCA(n_components=4,random_state=1)
              ],
-            
-            [RandomForestClassifier (n_estimators=200, criterion="entropy", max_depth=5, max_features=0.5, random_state=1)]
-            
-            
+                        ######## Second level ########
+            [
+             RandomForestClassifier (n_estimators=200, criterion="entropy", max_depth=5, max_features=0.5, random_state=1)]
             ]
 ```      
