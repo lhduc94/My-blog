@@ -63,6 +63,7 @@ from sklearn.decomposition import PCA
              ],
                         ######## Second level ########
             [
-             RandomForestClassifier (n_estimators=200, criterion="entropy", max_depth=5, max_features=0.5, random_state=1)]
+             RandomForestClassifier (n_estimators=200, criterion="entropy", max_depth=5, max_features=0.5, random_state=1)
             ]
+           ]
 ```      
