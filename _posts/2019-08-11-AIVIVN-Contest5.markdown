@@ -10,7 +10,7 @@ công ty muốn dự đoán được tổng bandwidth của mỗi server và s�
 trong vòng một tháng tiếp theo để lên kế hoạch hoạt động.
 
 ## Dữ liệu:
-Dữ liệu được mô tả trong tập `train.csv`
+Dữ liệu được mô tả trong tập `train.csv` hoặc tại [đây](https://www.aivivn.com/contests/5)
 ```csv
 UPDATE_TIME,ZONE_CODE,HOUR_ID,BANDWIDTH_TOTAL,MAX_USER
 2017-10-01,ZONE01,0,16096.71031272728,212415.0
