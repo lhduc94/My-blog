@@ -1,8 +1,7 @@
 ---
-title: AIVIVN Contest 5: BANDWIDTH PREDICTION
+title: AIVIVN Contest 5 - Bandwidth Prediction 2
+permalink: /2019/03/07/bandwidth_prediction_2/
 category: Data Science
-permalink: 2019/08/11/aivivn_contest_5
-author: Le Huynh Duc
 ---
 ## Giới thiệu:
 Một công ty cung cấp nền tảng giải trí cho phép user sử dụng các dịch vụ music, video, live stream, chat, … 
