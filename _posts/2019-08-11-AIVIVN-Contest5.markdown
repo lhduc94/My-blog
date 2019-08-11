@@ -77,7 +77,8 @@ def generate_date_time_series(d):
     result.append(d[1])
     return result
 ```
-Với mỗi ZoneName mình tiến hành fill missing value, mỗi vị trí bị thiếu sẽ được điền bằng trung bình giá trị tại 4 ngày trước. Ở đây mình có set `Nlog=True` để chuẩn hóa dữ liệu về dạng `log(N)` 
+Với mỗi ZoneName mình tiến hành fill missing value cho `BANDWIDTH`, về `MAX_USER` mình sẽ xử lý cách khác. Mỗi vị trí bị thiếu sẽ được điền bằng trung bình giá trị tại 4 ngày trước. Ở đây mình có set `Nlog=True` để chuẩn hóa dữ liệu về dạng `log(N)`. Để tránh bị lỗi `log(0)` mình replace những giá trị bằng `0` bằng `0.000003` (đây là giá trị nhỏ hơn giá trị min của `BANDWIDTH` của bài trước). Các bạn có thể thay thế hàm `np.log` bằng `np.log1p` mà không cần quan tâm tới giá trị 0. 
+
 ```python
 t1 = generate_date_time_series(train_df[train_df['ZONE_CODE'] == name].index[[0,-1]])
 SERVER = train_df[train_df['ZONE_CODE'] == name]
