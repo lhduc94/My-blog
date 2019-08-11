@@ -99,3 +99,123 @@ for i in xx:
 if Nlog:
     TIMESERIAL = np.log(TIMESERIAL)
 ```
+## Xây dựng dữ liệu training cho BANDWIDTH:
+Có 2 cách để xây dựng dữ liệu training:
+* Cách 1: Cho chuỗi thời gian `seq`, với mỗi giá trị $$y = seq_t$$ mình chọn `x` là $$seq_(t-1) - n_steps$$ đến $$seq_(t-1).
+* Cách 2: Cho chuỗi thời gian `seq`, với mỗi giá trị $$y = seq_t$$ mình chọn `x` bao gồm các giá trị của giờ đó những ngày hôm trước cùng với mean,min,max của các giá trị đó. Ngoài ra mình còn thêm vào 24 giá trị gần nhất.
+```python
+def split_1(sequence, n_steps):
+    X, y = list(), list()
+    for i in range(len(sequence)):
+        end_ix = i + n_steps
+        if end_ix > len(sequence)-1:
+            break
+        seq_x, seq_y = sequence[i:end_ix], sequence[end_ix]
+        X.append(seq_x)
+        y.append(seq_y)
+    
+    return np.array(X), np.array(y)
+
+def split_2(sequence, n_steps):
+    a = list(sequence)
+    X,y = list(), list()
+    for i in reversed(range(len(a))):
+        if i == n_steps-1:
+            break
+        seq_y = a[i]
+        seq_x = a[i-n_steps:i:24] + a[i-24:i] \
+                +[np.mean(a[i-n_steps:i:24]),
+                  np.min(a[i-n_steps:i:24]),
+                  np.max(a[i-n_steps:i:24])]
+        X.append(seq_x)
+        y.append(seq_y)
+    return np.array(X), np.array(y)
+```
+
+## Mô hình dự đoán BANDWIDTH
+Cũng như 2 bạn Rank 1,2. Mình cũng chọn `Linear Regression`, và cụ thể hơn là `Ridge`
+```python
+from sklearn.linear_model import Ridge
+Nlog=True
+def model_1(TIMESERIAL):
+    
+    train,test = TIMESERIAL[:-24*31],TIMESERIAL[-24*31:]
+    n_steps = 24*31
+    X, y = split_1(TIMESERIAL,n_steps)
+    X_train = X
+    y_train = y
+    
+    model = Ridge()
+    model.fit(X_train, y_train)
+    pred = model.predict(X_train)
+    if Nlog:
+        y_train = np.exp(y_train)
+        pred = np.exp(pred)
+    print(smape(y_train,pred))
+    
+    bw_pred = []
+    for i in range(24*31):
+        seq = TIMESERIAL[-n_steps:]
+        yhat = model.predict(np.array([seq]))
+        TIMESERIAL = np.append(TIMESERIAL,yhat[0])
+        bw_pred.append(yhat[0])
+    if Nlog:
+        bw_pred = np.exp(bw_pred)
+        
+    return bw_pred
+
+def model_2(TIMESERIAL):
+    
+    train,test = TIMESERIAL[:-24*31],TIMESERIAL[-24*31:]
+    n_steps = 24*31
+    X, y = split_2(TIMESERIAL,n_steps)
+    X_train = X
+    y_train = y
+    
+    model = Ridge()
+    model.fit(X_train, y_train)
+    pred = model.predict(X_train)
+    if Nlog:
+        y_train = np.exp(y_train)
+        pred = np.exp(pred)
+    print(smape(y_train,pred))
+    
+    bw_pred = []
+    for j in range(24*31):
+        i = len(TIMESERIAL)
+        seq = np.append(TIMESERIAL[i-n_steps:i:24],TIMESERIAL[i-24:i])
+        seq = np.append(seq,np.array([np.mean(TIMESERIAL[i-n_steps:i:24]),
+                  np.min(TIMESERIAL[i-n_steps:i:24]),
+                  np.max(TIMESERIAL[i-n_steps:i:24])]
+            ))
+        yhat = model.predict(np.array([seq]))
+        TIMESERIAL = np.append(TIMESERIAL,yhat[0])
+        bw_pred.append(yhat[0])
+    if Nlog:
+        bw_pred = np.exp(bw_pred)
+        
+    return bw_pred
+ ```
+Mình train và predict cho từng ZONENAME và kết hợp 2 model lại với nhau theo tham số `[0.67, 0.33]`
+```python
+bw_pred_1 = model_1(TIMESERIAL)
+bw_pred_2 = model_2(TIMESERIAL)
+bw_pred = bw_pred_1*0.67 + bw_pred_2*0.33
+```
+
+## Dự đoán MAX_USER
+Về MAX_USER mình không dự đoán mà chỉ lấy giá trị của ngày cuối cùng (đầy đủ 24 giá trị) làm kết quả.
+```python
+list_df_2 = []
+for idx,name in enumerate(test_df['ZONE_CODE'].unique()):
+    print(idx,name)
+    t = pd.DataFrame(train_df[train_df['ZONE_CODE']==name].groupby(['UPDATE_TIME']).size(),columns = ['num_hours'])
+    t2 = train_df[(train_df['ZONE_CODE']==name)&(train_df['UPDATE_TIME']==t[t['num_hours']==24].index[-1])]
+    list_df_2.append(t2)
+mu_df = pd.concat(list_df_2)[['ZONE_CODE','HOUR_ID','MAX_USER']] 
+mu_df.head()
+```
+
+## Kết luận
+Mình chỉ xử lý dữ liệu cơ bản, chưa xử lý nhiễu cũng như **feature engineering** nên kết quả không được cao. Các bạn có thể dùng các kỹ thuật xử lý mà bạn top1,2 trình bày để tối ưu kết quả.
+Source code đầy đủ của mình tại [đây](https://github.com/lhduc94/Aivivn-5-bandwidth-prediction-2) 
