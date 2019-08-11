@@ -27,4 +27,22 @@ UPDATE_TIME,ZONE_CODE,HOUR_ID,BANDWIDTH_TOTAL,MAX_USER
 - `BANDWIDTH_TOTAL`: tổng băng thông truy cập tương ứng trong vòng 1 giờ
 - `MAX_USER`: số user truy cập đồng thời tối đa trong vòng 1 giờ (là một số tự nhiên)
 
-Trong đó `UPDATE_TIME, HOUR_ID, ZONE_CODE` được định nghĩa như trên, id là mã số tương ứng cho file nộp bài. Các đội chơi cần dự đoán `BANDWIDTH_TOTAL`, và `MAX_USER` cho mỗi dòng.
+Trong đó `UPDATE_TIME, HOUR_ID, ZONE_CODE` được định nghĩa như trên, id là mã số tương ứng cho file nộp bài. Các đội chơi cần dự đoán `BANDWIDTH_TOTAL`, và `MAX_USER` cho mỗi dòng. 
+
+## Metrics đánh giá
+$$SMAPE = \frac{100\%}{N}\sum_{t=1}^{N}\frac{|F_t - A_t|}{|F_t| +|A_t|}$$
+Với $$A_t$$ là giá trị thực còn $$F_t$$ là giá trị dự  đoán.  Mình có code  lại metric trong bài của mình: 
+```python
+import numpy as np
+def mean_absolute_percentage_error(a, b): 
+    a = np.array(a)
+    b = np.array(b)
+    mask = a != 0
+    return (np.abs(a - b)/a)[mask].mean()*100
+
+def smape(a, b): 
+    a = np.array(a)
+    b = np.array(b)
+    mask = a != 0
+    return (np.abs(a - b)/(np.abs(a)+np.abs(b)))[mask].mean()*100
+```
