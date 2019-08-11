@@ -101,10 +101,10 @@ if Nlog:
 ```
 ## Xây dựng dữ liệu training cho BANDWIDTH:
 Có 2 cách để xây dựng dữ liệu training:
-* Cách 1: Cho chuỗi thời gian `seq`, với mỗi giá trị $$y = seq_t$$ mình chọn `x` là $$seq_(t-1) - n_steps$$ đến $$seq_(t-1).
-* Cách 2: Cho chuỗi thời gian `seq`, với mỗi giá trị $$y = seq_t$$ mình chọn `x` bao gồm các giá trị của giờ đó những ngày hôm trước cùng với mean,min,max của các giá trị đó. Ngoài ra mình còn thêm vào 24 giá trị gần nhất.
+* Cách 1: Cho chuỗi thời gian `seq`, với mỗi giá trị $$y = seq_t$$ mình chọn $$x$$ là $$seq_(t-1) - n_steps$$ đến $$seq_(t-1).
+* Cách 2: Cho chuỗi thời gian `seq`, với mỗi giá trị $$y = seq_t$$ mình chọn $$x$$ bao gồm các giá trị của giờ đó những ngày hôm trước cùng với mean,min,max của các giá trị đó. Ngoài ra mình còn thêm vào 24 giá trị gần nhất.
 
-
+Code
 ```python
 def split_1(sequence, n_steps):
     X, y = list(), list()
@@ -131,8 +131,7 @@ def split_2(sequence, n_steps):
                   np.max(a[i-n_steps:i:24])]
         X.append(seq_x)
         y.append(seq_y)
-    return np.array(X), np.array(y)
-```
+    return np.array(X), np.array(y)```
 
 ## Mô hình dự đoán BANDWIDTH
 Cũng như 2 bạn Rank 1,2. Mình cũng chọn `Linear Regression`, và cụ thể hơn là `Ridge`
