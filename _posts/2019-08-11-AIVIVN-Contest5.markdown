@@ -131,7 +131,8 @@ def split_2(sequence, n_steps):
                   np.max(a[i-n_steps:i:24])]
         X.append(seq_x)
         y.append(seq_y)
-    return np.array(X), np.array(y)```
+    return np.array(X), np.array(y)
+```
 
 ## Mô hình dự đoán BANDWIDTH
 Cũng như 2 bạn Rank 1,2. Mình cũng chọn `Linear Regression`, và cụ thể hơn là `Ridge`
