@@ -101,8 +101,8 @@ if Nlog:
 ```
 ## Xây dựng dữ liệu training cho BANDWIDTH:
 Có 2 cách để xây dựng dữ liệu training:
-* Cách 1: Cho chuỗi thời gian `seq`, với mỗi giá trị $$y = seq_t$$ mình chọn $$x$$ là $$seq_(t-1) - n_steps$$ đến $$seq_(t-1).
-* Cách 2: Cho chuỗi thời gian `seq`, với mỗi giá trị $$y = seq_t$$ mình chọn $$x$$ bao gồm các giá trị của giờ đó những ngày hôm trước cùng với mean,min,max của các giá trị đó. Ngoài ra mình còn thêm vào 24 giá trị gần nhất.
+* Cách 1: Cho chuỗi thời gian $$seq$$, với mỗi giá trị $$y = seq_t$$ mình chọn $$x$$ là $$seq_{t-1 - n\_steps}$$ đến $$seq_(t-1)$$
+* Cách 2: Cho chuỗi thời gian $$seq$$, với mỗi giá trị $$y = seq_t$$ mình chọn $$x$$ bao gồm các giá trị của giờ đó những ngày hôm trước cùng với mean,min,max của các giá trị đó. Ngoài ra mình còn thêm vào 24 giá trị gần nhất.
 
 Code
 ```python
