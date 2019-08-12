@@ -101,7 +101,7 @@ if Nlog:
 ```
 ## Xây dựng dữ liệu training cho BANDWIDTH:
 Có 2 cách để xây dựng dữ liệu training:
-* Cách 1: Cho chuỗi thời gian $$seq$$, với mỗi giá trị $$y = seq_t$$ mình chọn $$x$$ là $$seq_{t-1 - n\_steps}$$ đến $$seq_(t-1)$$
+* Cách 1: Cho chuỗi thời gian $$seq$$, với mỗi giá trị $$y = seq_t$$ mình chọn $$x$$ là $$seq_{t-1 - n\_steps}$$ đến $$seq_{t-1}$$
 * Cách 2: Cho chuỗi thời gian $$seq$$, với mỗi giá trị $$y = seq_t$$ mình chọn $$x$$ bao gồm các giá trị của giờ đó những ngày hôm trước cùng với mean,min,max của các giá trị đó. Ngoài ra mình còn thêm vào 24 giá trị gần nhất.
 
 Code
@@ -219,5 +219,6 @@ mu_df.head()
 ```
 
 ## Kết luận
-Mình chỉ xử lý dữ liệu cơ bản, chưa xử lý nhiễu cũng như **feature engineering** nên kết quả không được cao. Các bạn có thể dùng các kỹ thuật xử lý mà bạn top1,2 trình bày để tối ưu kết quả.
+Mình chỉ xử lý dữ liệu cơ bản, chưa xử lý nhiễu cũng như **feature engineering** nên kết quả không được cao. Các bạn có thể dùng các kỹ thuật xử lý mà bạn top 1,2 trình bày để tối ưu kết quả.
+
 Source code đầy đủ của mình tại [đây](https://github.com/lhduc94/Aivivn-5-bandwidth-prediction-2) 
