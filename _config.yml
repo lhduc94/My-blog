@@ -109,8 +109,8 @@ analytics:
 author:
   name             : "Lê Huỳnh Đức"
   avatar           : "assets/images/avatar.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "Data Scientist at FPT Telecom."
-  location         : "Ho Chi Minh City"
+  bio              : "Data Scientist at Coc Coc."
+  location         : "Hanoi City"
   email            : "lhduc94@gmail.com"
   links:
     - label: "Email"
@@ -124,10 +124,10 @@ author:
       # url: "https://twitter.com/"
     - label: "Facebook"
       icon: "fab fa-fw fa-facebook-square"
-      # url: "https://facebook.com/"
+      url: "https://facebook.com/khoai.kho.7"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      # url: "https://github.com/"
+      url: "https://github.com/lhduc94"
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
       # url: "https://instagram.com/"
@@ -144,7 +144,7 @@ footer:
       # url:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      # url:
+      url: "https://github.com/lhduc94"
     - label: "GitLab"
       icon: "fab fa-fw fa-gitlab"
       # url:
