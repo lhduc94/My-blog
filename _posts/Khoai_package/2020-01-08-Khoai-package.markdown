@@ -15,12 +15,12 @@ Là hàm giảm dung lượng lưu trữ cho DataFrame
 def reduce_mem_usage(df, verbose=True):
     """ A function reduce memory of DataFrame.
     Parameters:
-            df: DataFrame
-                A table of data.
-            veborse: bool
-                Show mem. usage decreased.
+                df: DataFrame
+                    A table of data.
+                veborse: bool
+                    Show mem. usage decreased.
     Output:
-            DataFrame
+                DataFrame
     """
 ```
 Import thư viện
@@ -64,15 +64,15 @@ Là hàm tính khoảng cách giữa 2 array chứa Missing Value
 def dist_with_miss(a, b, p=1, l=0.0):
     """ A function compute a distance betwen 2 array with missing value.
     Parameters:
-        a: array
-            Input Array.	
-        b: array
-            Input Array.
-        p: int
-            The order of the norm of the difference in minkowski distance.
-        l: float
-            The lambda value of missing value.
+                a: array
+                    Input Array.	
+                b: array
+                    Input Array.
+                p: int
+                    The order of the norm of the difference in minkowski distance.
+                l: float
+                    The lambda value of missing value.
     Output: 
-        distance: float
-            The distance between 2 array. 
+                distance: float
+                    The distance between 2 array. 
 ```
