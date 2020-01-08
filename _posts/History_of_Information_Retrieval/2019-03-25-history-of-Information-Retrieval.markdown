@@ -8,7 +8,7 @@ category: Information Retrieval
  
 Năm 1945, Trong bài báo [As We May Think](https://www.theatlantic.com/magazine/archive/1945/07/as-we-may-think/303881/), Vannevar Bush đã đề cập về việc sử dụng máy tính để lưu trữ và truy vấn thông tin, vào thời điểm này, những tác vụ nghiên cứu được trình bày trên màn hình và không còn thực hiện trên giấy.
 <p align="center">	
-  <img src="https://raw.githubusercontent.com/lhduc94/My-blog/master/_posts/images_2019-03-25-history-of-Information-Retrieval/img1.png">	
+  <img src="https://raw.githubusercontent.com/lhduc94/My-blog/master/_posts/History_of_Information_Retrieval/img1.png">	
  </p>
 
 Sự xuất hiện của Web đã tạo ra sự khác biệt lịch sử trong nghiên cứu và công nghệ truy vấn thông tin. Trước khi Web ra đời, IR phần lớn bị hạn chế trong phòng thí nghiệm, với các hệ thống triển khai chỉ có khả năng hạn chế; cả hai hệ thống nghiên cứu và thương mại hoạt động độc lập, đắt tiền, hạn chế và áp dụng cho các kho dữ liệu đã được biên tập và định nghĩa từ trước. Những hệ thống truy vấn thông tin đầu tiên được xem như là "Thư viện sẽ trông như thế nào nếu áp dụng máy tính" ;trong khi những nhà nghiên cứu không chia sẻ quan điểm này, những tập dữ liệu quan trọng chỉ được biên tập bởi thủ thư hay biên tập viên.
