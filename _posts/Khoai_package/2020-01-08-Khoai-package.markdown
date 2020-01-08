@@ -61,7 +61,7 @@ model_results = calibrate(model_results, 50000, 500, 10000, 500)
 Là hàm tính khoảng cách giữa 2 array chưa Missing Value
 ```python
 def dist_with_miss(a, b, p=1, l=0.0):
-    """ A function compute a distance betwwen 2 array with missing value.
+    """ A function compute a distance betwen 2 array with missing value.
     Parameters:
         a: array
             Input Array.	
