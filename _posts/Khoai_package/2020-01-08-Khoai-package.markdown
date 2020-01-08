@@ -3,6 +3,7 @@ title: Khoai package
 permalink: /my-package/khoai-package
 category: Data Science
 ---
+
 Bạn có thể cài đặt thư viện bằng cách sử dụng `pip` theo cú pháp
 ```bash
 pip install khoai
@@ -58,7 +59,7 @@ model_results = calibrate(model_results, 50000, 500, 10000, 500)
 
 ## Metric tool
 ### dist_with_miss
-Là hàm tính khoảng cách giữa 2 array chưa Missing Value
+Là hàm tính khoảng cách giữa 2 array chứa Missing Value
 ```python
 def dist_with_miss(a, b, p=1, l=0.0):
     """ A function compute a distance betwen 2 array with missing value.
@@ -75,4 +76,3 @@ def dist_with_miss(a, b, p=1, l=0.0):
         distance: float
             The distance between 2 array. 
 ```
-## Defined Function 
