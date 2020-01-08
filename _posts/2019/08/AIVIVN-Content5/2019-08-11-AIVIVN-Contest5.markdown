@@ -1,7 +1,7 @@
 ---
 title: AIVIVN Contest 5 - Bandwidth Prediction 2
 permalink: /2019/08/11/bandwidth_prediction_2/
-category: C
+category: Competition
 ---
 ## Giới thiệu:
 Một công ty cung cấp nền tảng giải trí cho phép user sử dụng các dịch vụ music, video, live stream, chat, … 
