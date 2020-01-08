@@ -1,6 +1,6 @@
 ---
 title: AIVIVN Contest 5 - Bandwidth Prediction 2
-permalink: /2019/03/07/bandwidth_prediction_2/
+permalink: /2019/08/11/bandwidth_prediction_2/
 category: Data Science
 ---
 ## Giới thiệu:
