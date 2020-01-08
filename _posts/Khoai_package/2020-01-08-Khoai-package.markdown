@@ -31,8 +31,8 @@ Là hàm tính khoảng cách giữa 2 array chưa Missing Value
 def dist_with_miss(a, b, p=1, l=0.0):
     """ A function compute a distance betwwen 2 array with missing value.
     Parameters:
-	a: array
-	Input Array.	
+		a: array
+			Input Array.	
 		b: array
 			Input Array.
 		p: int
