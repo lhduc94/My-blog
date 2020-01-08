@@ -14,12 +14,12 @@ Là hàm giảm dung lượng lưu trữ cho DataFrame
 def reduce_mem_usage(df, verbose=True):
     """ A function reduce memory of DataFrame.
     Parameters:
-        df: DataFrame
-            A table of data.
-        veborse: bool
-            Show mem. usage decreased.
+            df: DataFrame
+                A table of data.
+            veborse: bool
+                Show mem. usage decreased.
     Output:
-        DataFrame
+            DataFrame
     """
 ```
 Import thư viện
