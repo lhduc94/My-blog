@@ -6,11 +6,11 @@ category: Data Science
 ## Model
 |model|parameters|note|
 |-----|----------|----|
-|LightGBM|   |   |
-|XGBoost|   |   |
-|CatBoost|   |   |
+|LightGBM|   |  |
+|XGBoost| |   |
+|CatBoost| |   |
 |RandomForest|   |    |
-|Extra Tree| |
+|Extra Tree| |  |
 |Regularized Greedy Forest| | |
 |Field-aware Factorization Machines| | |
 |Denoise Auto Encoder| | |
