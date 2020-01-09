@@ -4,8 +4,8 @@ permalink: 2020/01/09/The tables of all
 category: Data Science
 ---
 ## Model
+|---
 |model|parameters|note|
-|-----|----------|----|
 |-----|----------|----|
 |LightGBM|   |  |
 |XGBoost| |   |
