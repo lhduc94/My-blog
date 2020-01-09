@@ -16,13 +16,15 @@ category: Data Science
 |Field-aware Factorization Machines| | |
 |Denoise Auto Encoder| | |
 |Hill Climber Linear Model| | |
+|---
 
 
 ## Nomalize
+|--
 |alg|note|
 |---|----|
 |RankGauss|    |
-
+|--
 ## Feature Engineering
 
 ... *I'll fill it soon*
