@@ -22,7 +22,6 @@ category: Data Science
 
 
 ## Nomalize
-|---
 |alg|note|
 |---|----|
 |RankGauss|    |
