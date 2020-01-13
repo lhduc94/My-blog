@@ -6,13 +6,17 @@ category: Data Science
 Một số thông tin hữu ích cho Data Science Project
 ## Model
 
-### LightGBM
+### 1. LightGBM
 [link paper](https://papers.nips.cc/paper/6907-lightgbm-a-highly-efficient-gradient-boosting-decision-tree.pdf)
 
 [link source code](https://lightgbm.readthedocs.io/en/latest/)
 
+**import**
 ```python
 import lightgbm as lgb
+```
+**regression**
+```python
 params = {
     'objective': 'regression_l1',
     'nthread': 10,
@@ -30,6 +34,27 @@ params = {
     'device_type': 'gpu'
     'verbose': -1
  }
+ ```
+ **classification**
+ ```python
+ params = {
+    'objective': 'multiclass',
+    "num_class" : 4,
+    'nthread': 10,
+    'max_depth': 8,
+    'task': 'train',
+    'boosting_type': 'gbdt',
+    'metric': 'softmax',
+    'num_leaves': 31,
+    'learning_rate': 0.25,
+    'feature_fraction': 0.9,
+    'bagging_fraction': 0.8,
+    'bagging_freq': 5,
+    'verbose': -1
+ }
+ ```
+ **train model**
+ ```python 
 lgb_train = lgb.Dataset(train_x,train_y)
 lgb_valid = lgb.Dataset(valid_x,valid_y)
 # train
@@ -40,14 +65,14 @@ gbm = lgb.train(params=params,
                 early_stopping_rounds=100,
                 verbose_eval=100)
 ```
-### XGBoost
-### CatBoost
-### RandomForest
-### Extra Tree
-### Regularized Greedy Forest
-### Field-aware Factorization Machines
-### Denoise Auto Encoder
-### Hill Climber Linear Model
+### 2. XGBoost
+### 3. CatBoost
+### 4. RandomForest
+### 5. Extra Tree
+### 6. Regularized Greedy Forest
+### 7. Field-aware Factorization Machines
+### 8. Denoise Auto Encoder
+### 9. Hill Climber Linear Model
 
 
 
