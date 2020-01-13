@@ -1,5 +1,5 @@
 ---
-title: The tables of all
+title: Cơ bản về Data Science
 permalink: 2020/01/09/The tables of all
 category: Data Science
 ---
