@@ -17,34 +17,12 @@ import lightgbm as lgb
 ```
 **regression**
 ```python
-params = {
-    'objective': 'regression_l1',
-    'nthread': 10,
-    'max_depth': 8,
-    'task': 'train',
-    'boosting_type': 'gbdt',
-    'metric': 'mape', # this is abs(a-e)/max(1,a)
-    'num_leaves': 31,
-    'learning_rate': 0.25,
-    'feature_fraction': 0.9,
-    'bagging_fraction': 0.8,
-    'bagging_freq': 5,
-    'lambda_l1': 0.06,
-    'lambda_l2': 0.1,
-    'device_type': 'gpu'
-    'verbose': -1
- }
  ```
  **classification**
- ```python
- params = {
-    'objective': 'multiclass',
-    "num_class" : 4,
-    'nthread': 10,
-    'max_depth': 8,
-    'task': 'train',
+```python
+params = {
     'boosting_type': 'gbdt',
-    'metric': 'softmax',
+    'max_depth': 8,
     'num_leaves': 31,
     'learning_rate': 0.25,
     'feature_fraction': 0.9,
@@ -52,20 +30,44 @@ params = {
     'bagging_freq': 5,
     'verbose': -1
  }
- ```
- **train model**
- ```python 
-lgb_train = lgb.Dataset(train_x,train_y)
-lgb_valid = lgb.Dataset(valid_x,valid_y)
-# train
-gbm = lgb.train(params=params,
-                data=lgb_train,
-                n_esimators=1000,
-                valid_sets=[lgb_train, lgb_valid],
-                early_stopping_rounds=100,
-                verbose_eval=100)
+model = lgb.LGBMClassifier(**params, n_estimators=1000, n_jobs = -1)
+#train model
+model.fit(X_train, y_train,
+          eval_set=[(X_train, y_train), (X_valid, y_valid)],
+          eval_metric='logloss',
+          verbose=100,
+          early_stopping_rounds=100)
+## Phan lop
+y_pred = model.predict(X_valid)
+## Du doan Xac suat
+y_pred_proba = model.predict_proba(X_valid)
 ```
 ### 2. XGBoost
+**import**
+```python
+import xgboost as xgb
+```
+**classification**
+```python
+params = {
+    "max_depth": 8,
+    "booster": "gbtree",
+    "subsample": 0.8,
+    "colsample_bytree": 0.7,
+    "gamma":0.1,
+    "learning_rate":0.1
+}
+model = xgb.XGBClassifier(**params,
+                          n_estimators=1000,
+                          n_jobs=-1,
+                          gpu_id=0)
+#train model 
+model.fit(X_train, y_train)
+## Phan lop
+y_pred = model.predict(X_valid)
+## Du doan Xac suat
+y_pred_proba = model.predict_proba(X_valid)
+```
 ### 3. CatBoost
 ### 4. RandomForest
 ### 5. Extra Tree
