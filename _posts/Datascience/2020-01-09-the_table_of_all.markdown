@@ -22,10 +22,25 @@ category: Data Science
 
 
 ## Nomalize
+|---
 |alg|note|
 |---|----|
 |RankGauss|    |
 |---
 ## Feature Engineering
-
+### Categorical Encoding
+1) One Hot Encoding
+2) Label Encoding
+3) Ordinal Encoding
+4) Helmert Encoding
+5) Binary Encoding
+6) Frequency Encoding
+7) Mean Encoding
+8) Weight of Evidence Encoding
+9) Probability Ratio Encoding
+10) Hashing Encoding
+11) Backward Difference Encoding
+12) Leave One Out Encoding
+13) James-Stein Encoding
+14) M-estimator Encoding
 ... *I'll fill it soon*
